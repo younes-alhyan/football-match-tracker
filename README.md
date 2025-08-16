@@ -1,136 +1,95 @@
-# Project: Football Match Tracker
+# ⚽ Football Match Tracker
 
-## Overview
+**Stay updated with live scores, fixtures, and team schedules—all from your terminal!** 🖥️
 
-This project is a command-line tool that fetches and displays football
-match data, including live matches, past and upcoming fixtures, and team
-information from the API-SPORTS.io football API. It is designed to
-provide football enthusiasts with real-time updates and detailed
-information about their favorite teams and leagues.
 
-## Features
+## 🚀 Features
 
-- **Display Today's Matches**: Shows fixtures for the current day
-for various leagues (e.g., Premier League, La Liga, Serie A). - **Live
-Matches**: Fetches and displays currently live matches. - **Team
-Fixtures**: Allows the user to select a team and see both past and
-upcoming matches. - **Colorful Console Output**: Uses ANSI escape
-codes for colorizing text for improved readability. - **Command-line
-Interface**: Provides a CLI to choose options and fetch data
-interactively.
+* 📅 **Today's Matches** – See all fixtures for the day across popular leagues (Premier League, La Liga, Serie A, etc.)
+* 🔴 **Live Matches** – Track ongoing matches in real-time
+* 🏟️ **Team Fixtures** – View past and upcoming matches for your favorite teams
+* 🌈 **Colorful Console Output** – ANSI escape codes for improved readability
+* 💻 **Interactive CLI** – Choose options and fetch data directly from the terminal
 
-## Prerequisites
 
-- **Node.js**: Ensure Node.js is installed on your system. -
-**API Key**: You need an API key from
-[API-SPORTS.io](https://www.api-football.com/) to fetch football data.
-Store the API key in a `.env` file.
+## 🛠️ Prerequisites
 
-## Installation
+* **Node.js** – Ensure Node.js is installed
+* **API Key** – Get one from [API-SPORTS.io](https://www.api-football.com/) and store it in a `.env` file
 
-1. Clone the repository:
 
-```bash 
-git clone https://github.com/itachi-555/football-match-tracker.git 
-cd football-match-tracker 
-```
-
-2. Install dependencies:
-
-```bash 
-npm install 
-```
-
-3. Create a `.env` file in the root of your project with your API
-key:
-
-```bash 
-API_KEY=your_api_key_here 
-```
-
-4. Run the tool by executing the Bash script:
-
-```bash 
-./matches.sh 
-```
-
-## Directory Structure
-
-``` 
-. 
-├── matches.js # Script for fetching today's matches 
-├──live.js # Script for fetching live matches 
-├── teams.js # Script fordisplaying past and upcoming fixtures for a selected team 
-├── utils.js# Utility functions and constants 
-├── matches.sh # Bash script to run the tool 
-├── .env # Environment variables 
-└── README.md # Project documentation 
-```
-
-## Usage
-
-You can use the `matches.sh` Bash script to interact with the tool.
-There are options for fetching different types of data:
+## 📦 Installation
 
 ```bash
-# Display today's matches 
+git clone https://github.com/itachi-555/football-match-tracker.git
+cd football-match-tracker
+npm install
+```
+
+Create a `.env` file in the project root:
+
+```env
+API_KEY=your_api_key_here
+```
+
+Run the tool:
+
+```bash
 ./matches.sh
+```
 
-# Display live matches 
+
+## 🗂️ Directory Structure
+
+```text
+.
+├── matches.js      # Fetch today's matches
+├── live.js         # Fetch live matches
+├── teams.js        # Past & upcoming team fixtures
+├── utils.js        # Utility functions & console colors
+├── matches.sh      # Bash script to run the tool
+├── .env            # Environment variables
+└── README.md       # Project documentation
+```
+
+
+## 🎮 Usage
+
+### Display today's matches
+
+```bash
+./matches.sh
+```
+
+### Display live matches
+
+```bash
 ./matches.sh -l
-
-# Display upcoming fixtures for a specific team 
-./matches.sh -t 
-
 ```
 
-### Command-line Options
+### Display team fixtures
 
-- `-l`: Fetch live matches. 
-- `-t`: Choose a team and display past and upcoming fixtures.
-
-### Example Output
-
-**Today's Matches:**
-
-```bash 
-Matches for Premier League : - Manchester United vs Chelsea
-Time: Saturday, 14 September 2024, 17:30
-
-Matches for La Liga : No matches found for La Liga today. 
+```bash
+./matches.sh -t
 ```
 
-**Live Matches:**
+**Command-line Options:**
 
-```bash 
-Premier League: Manchester United 1 - 0 Chelsea (Second Half)
-```
+* `-l` → Fetch live matches
+* `-t` → Choose a team and see past/upcoming fixtures
 
-**Team Fixtures:**
 
-```bash 
-1: Manchester United 2: Real Madrid ... Choose a Team (or
-type 0 to exit): 1
+## 🖌️ Customization
 
-Last Match: Manchester United 3 vs 1 Chelsea Time: Saturday, 7 September
-2024, 17:00
+* Modify `utils.js` to change **console colors** using ANSI escape codes
 
-Upcoming Fixtures: 1 - Manchester United vs Liverpool on Sunday, 14
-September 2024, 17:30 
-```
 
-## Configuration
+## ⚠️ Notes
 
-### `.env` File
+* Ensure `.env` contains a valid API key
+* Make sure Node.js is installed and up to date
 
-The `.env` file contains the API key for interacting with the API:
 
-```.env 
-API_KEY=your_api_key_here 
-```
+## 📬 Feedback & Contributions
 
-### Color Customization
-
-The `utils.js` file contains ANSI escape codes for coloring the
-console output. You can customize the colors by modifying the `colors`
-object in `utils.js`.
+Contributions, issues, and feature requests are welcome! Open a PR or an issue on GitHub. 🚀
